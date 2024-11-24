@@ -1,13 +1,13 @@
-package binary_trees
+package binary_search_tree
 
 import (
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
-func TestBinarySearchTree_InsertSymmetricTraverse(t *testing.T) {
+func TestTree_InsertSymmetricTraverse(t *testing.T) {
 	data := [...]int{1333, 342, 0, 78, 34, 234, 6676, 20, 309, 4, 15}
-	tree := BinarySearchTree{}
+	tree := Tree{}
 	for _, v := range data {
 		tree.Insert(v)
 	}
@@ -22,9 +22,9 @@ func TestBinarySearchTree_InsertSymmetricTraverse(t *testing.T) {
 	assert.Equal(t, expected2, tree.PreOrderTraverse())
 }
 
-func TestBinarySearchTree_InsertSymmetricTraverseByIterator(t *testing.T) {
+func TestTree_InsertSymmetricTraverseByIterator(t *testing.T) {
 	data := [...]int{1333, 342, 0, 78, 34, 234, 6676, 20, 309, 4, 15}
-	tree := BinarySearchTree{}
+	tree := Tree{}
 	for _, v := range data {
 		tree.Insert(v)
 	}
@@ -39,9 +39,9 @@ func TestBinarySearchTree_InsertSymmetricTraverseByIterator(t *testing.T) {
 	}
 }
 
-func TestBinarySearchTree_InsertSymmetricTraverseByIteratorPartial(t *testing.T) {
+func TestTree_InsertSymmetricTraverseByIteratorPartial(t *testing.T) {
 	data := [...]int{1333, 342, 0, 78, 34, 234, 6676, 20, 309, 4, 15}
-	tree := BinarySearchTree{}
+	tree := Tree{}
 	for _, v := range data {
 		tree.Insert(v)
 	}
